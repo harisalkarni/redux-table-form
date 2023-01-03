@@ -10,11 +10,11 @@ const UserList = () => {
     const dispatch = useDispatch()
 
     const handleRemoveUser = (id:string) => {
-        dispatch(deleteUser({id : id}))
+        dispatch(deleteUser({id}))
     }
 
     const renderCard = () => users.map(user => (
-        <div className='bg-gray-300 p-5 flex items-center justify-between ' key={user.id}>
+        <div className='bg-gray-100 px-8 py-12 flex items-center justify-between rounded shadow-md' key={user.id}>
             <div>
                <h3 className='font-bold text-lg text-gray-700 text-left '>{user.name}</h3>
                <span className='font-normal text-gray-600'>{user.email}</span>
